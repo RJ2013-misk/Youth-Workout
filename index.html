@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1F4E78" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>RugbyTrackWorkout</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <meta name="description" content="Spine‑friendly machine workout tracker for a 13‑year‑old rugby + track athlete." />
+</head>
+<body>
+  <header>
+    <h1>Rugby & Track Workout</h1>
+    <p class="subtitle">Shoulders • Back • Chest — Machine Only • No Overhead/Spine Compression</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="workout">Workout</button>
+    <button class="tab" data-tab="checklist">Checklist</button>
+    <button class="tab" data-tab="about">Notes</button>
+  </nav>
+
+  <main>
+    <section id="workout" class="tab-panel active">
+      <div class="day-picker">
+        <button class="day-btn day1" data-day="Day 1">Day 1</button>
+        <button class="day-btn day2" data-day="Day 2">Day 2</button>
+        <button class="day-btn day3" data-day="Day 3">Day 3</button>
+      </div>
+      <div id="exerciseList"></div>
+      <div class="actions">
+        <button id="saveBtn" class="primary">Save</button>
+        <button id="exportBtn">Export Progress</button>
+        <button id="resetBtn" class="danger">Reset Day</button>
+      </div>
+    </section>
+
+    <section id="checklist" class="tab-panel">
+      <h2>Gym Checklist</h2>
+      <ul id="checklistItems" class="checklist"></ul>
+    </section>
+
+    <section id="about" class="tab-panel">
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Use light–moderate weight with perfect form; stop 2–3 reps before failure.</li>
+        <li>No overhead pressing or vertical spine loading.</li>
+        <li>Slow lowers (2–3 seconds) and smooth control on every rep.</li>
+        <li>Warm up 5–8 minutes and finish with easy cardio and mobility.</li>
+        <li>Ask a coach/parent to supervise machine setup and form.</li>
+      </ul>
+      <p class="fineprint">This is general fitness guidance, not medical advice. If anything hurts (sharp/pinching pain), stop and tell a coach/parent.</p>
+    </section>
+  </main>
+
+  <footer>
+    <button id="installBtn" class="install hidden">Install App</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
