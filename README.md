@@ -1,48 +1,17 @@
+# Rugby Preparation Workout (PWA)
 
-# Rugby & Track Workout (PWA)
+iPhone-friendly workout app for the 3-day Rugby Preparation Gym Workout Plan.
 
-Mobile-friendly, offline-capable workout tracker for a 13-year-old rugby + track athlete. Machine-only plan with no overhead press/vertical spine loading.
+- Each day lists exercises with sets x reps; tap one for a description, steps and a stick-figure diagram.
+- Tap "I did today's workout" to log it. The status dot (and icon) is red until a workout is logged today, then green.
+- Data is stored only on the device (localStorage). Works offline.
 
-## 🚀 Quick Start (GitHub Pages)
+## Install on iPhone
+1. Enable GitHub Pages (Settings > Pages > Deploy from branch `main`, root).
+2. Open `https://rj2013-misk.github.io/Youth-Workout/` in Safari.
+3. Share > Add to Home Screen.
 
-1. **Create a new GitHub repository** (e.g., `rugby-track-workout`).
-2. **Upload** the contents of this folder (keep files at the **repo root**).
-3. Go to **Settings ➜ Pages**:
-   - **Build and deployment ➜ Source**: *Deploy from a branch*
-   - **Branch**: `main` (root `/`)
-4. Click **Save** and wait 1–3 minutes. Your site will appear at:
-   - `https://<your-username>.github.io/<your-repo>/`
-5. Open the site on your phone and choose **Install App** (or *Add to Home Screen*).
+iOS captures the home-screen icon only when the app is added, so the home-screen icon cannot change color afterward. The in-app status dot, header and theme color always show red/green.
 
-> Tip: If you change any file later, commit & push—GitHub Pages redeploys automatically.
-
-## 🧭 App Structure
-```
-index.html            # UI: Workout / Checklist / Notes
-styles.css            # Mobile-first styles
-app.js                # Logic, localStorage saving, export, install
-workout_data.json     # All exercises, machines, targets, instructions
-manifest.webmanifest  # PWA metadata (name, icons)
-service-worker.js     # Offline caching
-icons/icon-192.png
-icons/icon-512.png
-```
-
-## ✏️ Editing the Plan
-- Update **workout_data.json** to change exercises, targets, or instructions.
-- Keep paths as-is. The service worker caches files for offline use.
-
-## 📱 iOS & Android Notes
-- **Android (Chrome/Edge)**: You’ll see an **Install** prompt; or use ⋮ menu ➜ *Add to Home screen*.
-- **iOS (Safari)**: Tap **Share** ➜ *Add to Home Screen*. Offline works after the first load.
-
-## 🔒 Privacy
-No accounts or servers. All logs are saved **locally** in the device’s browser storage. Use **Export Progress** to download your data.
-
-## 🛠 Troubleshooting
-- If updates don’t appear, refresh twice or go to **Site Settings ➜ Clear storage** (service worker cache).
-- GitHub Pages must serve from `https://`; the PWA install button appears only when served over HTTPS.
-
----
-
-**Safety**: This is general fitness guidance. For sharp/pinching pain, stop and consult a coach/parent.
+## Editing
+Exercises: `workout_data.js`. Diagrams: `diagrams.js`.
